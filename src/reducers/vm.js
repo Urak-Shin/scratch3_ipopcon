@@ -1,4 +1,4 @@
-import VM from 'scratch-vm';
+import VM from '../../scratch-vm';
 import Storage from '../lib/storage';
 
 const SET_VM = 'scratch-gui/vm/SET_VM';

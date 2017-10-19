@@ -5,7 +5,7 @@ import makeToolboxXML from '../lib/make-toolbox-xml';
 import PropTypes from 'prop-types';
 import React from 'react';
 import VMScratchBlocks from '../lib/blocks';
-import VM from 'scratch-vm';
+import VM from '../../scratch-vm';
 import Prompt from './prompt.jsx';
 import BlocksComponent from '../components/blocks/blocks.jsx';
 import Toolbox from './Toolbox.js';
@@ -56,10 +56,10 @@ class Blocks extends React.Component {
 
     this.ScratchBlocks.Msg = Blockly.Msg;
         this.Toolbox = Toolbox;
-    
+
     var _ipopcon = new Ipopcon();
         var blocks = _ipopcon.getBlocks();
-    
+
 
         var pluginPackage = {
             "ipopcon":Ipopcon
@@ -73,12 +73,12 @@ class Blocks extends React.Component {
      for (var key in blocks) {
                 this.ScratchBlocks.Blocks[key] = blocks[key];
         }
-    
+
     var toolbox = this.Toolbox.getDefaultToolBox();
 
 
     var ipopconToolbox = _ipopcon.getToolbox();
-    toolbox = toolbox.replace("</xml>", ipopconToolbox + "</xml>"); 
+    toolbox = toolbox.replace("</xml>", ipopconToolbox + "</xml>");
     var toolboxconfig = {toolbox: toolbox};
 
        const workspaceConfig = defaultsDeep({}, Blocks.defaultOptions, this.props.options,toolboxconfig);

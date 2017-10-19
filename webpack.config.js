@@ -107,7 +107,7 @@ module.exports = {
         }]),
         new CopyWebpackPlugin([{
             from: 'extension-worker.{js,js.map}',
-            context: 'node_modules/scratch-vm/dist/web'
+            context: 'scratch-vm/dist/web'
         }])
     ].concat(process.env.NODE_ENV === 'production' ? [
         new webpack.optimize.UglifyJsPlugin({

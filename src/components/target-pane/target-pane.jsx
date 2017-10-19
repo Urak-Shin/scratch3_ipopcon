@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import VM from 'scratch-vm';
+import VM from '../../../scratch-vm';
 
 import BackdropLibrary from '../../containers/backdrop-library.jsx';
 import CostumeLibrary from '../../containers/costume-library.jsx';

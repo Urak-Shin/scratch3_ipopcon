@@ -1,7 +1,7 @@
 import bindAll from 'lodash.bindall';
 import PropTypes from 'prop-types';
 import React from 'react';
-import VM from 'scratch-vm';
+import VM from '../../scratch-vm';
 import AudioEngine from 'scratch-audio';
 import LibraryComponent from '../components/library/library.jsx';
 
